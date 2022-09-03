@@ -1,0 +1,43 @@
+
+
+class Solution(object):
+    # reverses string as a list of characters
+    def reverseString(self, s):
+        s = s[::-1]
+        
+        return s
+
+      
+    # converts roman letters to decimal numbers
+    def romanToInt(self, string):
+        count = 0
+        for letter in string:
+            if letter == 'I':
+                count += 1
+            elif letter == 'V':
+                count += 5
+            elif letter == 'X':
+                count += 10
+            elif letter == 'L':
+                count += 50
+            elif letter == 'C':
+                count += 100
+            elif letter == 'D':
+                count += 500
+            elif letter == 'M':
+                count += 1000
+            else:
+                return False
+        return count
+
+      
+      # checks if a number is palindrome
+    def isPalindrome(self, x):
+        listChar = str(x)
+        reversedString = listChar[::-1]
+        reversedNum = int(reversedString)
+
+        if (reversedNum == x):
+            return True
+        return False
+        
